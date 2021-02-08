@@ -22,6 +22,24 @@ fmt.Scan(&a, &b, &c)
 fmt.Println(a, b, c) // 1 2 3
 ```
 
+## 1行N個の文字列を受取る
+```
+N
+
+1 2 3 4 5 ... N
+```
+
+```go
+var n int
+fmt.Scan(&n)
+
+a := make([]int, n)
+for i := range a {
+	fmt.Scan(&a[i])
+}
+fmt.Println(a) // [1 2 3 4 ... N]
+```
+
 ## 1行1つの文字列を受け取る
 ```
 hello
